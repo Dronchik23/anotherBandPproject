@@ -63,7 +63,6 @@ import { BloggerUsersController } from './blogger/blogger.users.controller';
 import { FindBannedUsersByBlogIdService } from './use-cases/blogger/users/find-banned-users-by-blogId-use-case';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MailerModule } from '@nestjs-modules/mailer';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BlogsQueryRepository } from './query-repositorys/blogs-query.repository';
 import { CommentsQueryRepository } from './query-repositorys/comments-query.repository';
@@ -73,6 +72,7 @@ import { PostsQueryRepository } from './query-repositorys/posts-query.repository
 import * as process from 'process';
 import { CreateUserService } from './use-cases/users/create-user-by-super-admin-use-case';
 import { LogGuard } from './auth/strategys/basic-strategy';
+import { MailerModule } from '@nest-modules/mailer';
 
 export const useCases = [
   CreateBlogService,

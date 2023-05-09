@@ -1,5 +1,5 @@
+import { MailerService } from '@nest-modules/mailer';
 import { Injectable, Scope } from '@nestjs/common';
-import { MailerService } from '@nestjs-modules/mailer';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable({ scope: Scope.DEFAULT })
