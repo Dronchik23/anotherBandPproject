@@ -210,8 +210,10 @@ OFFSET $5;
   }
 
   async findUserByUserIdWithDBType(userId: string): Promise<UserDBType> {
-    return await this.dataSource.query(`SELECT * FROM users WHERE id = $1`, [
-      userId,
-    ]);
+    const result = await this.dataSource.query(
+      `SELECT * FROM users WHERE id = $1`,
+      [userId],
+    );
+    return result[0];
   }
 }
